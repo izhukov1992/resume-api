@@ -9,5 +9,5 @@ class Social(models.Model):
     """
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    type = models.IntegerField(choices=SOCIALS)
+    type = models.CharField(max_length=255, choices=SOCIALS)
     url = models.URLField()
