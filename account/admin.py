@@ -6,6 +6,7 @@ from account.models import Account
 from socials.models import Social
 from jobs.models import Job
 from educations.models import Education
+from skills.models import Skill
 
 
 class AccountInline(admin.StackedInline):
@@ -39,11 +40,19 @@ class EducationInline(admin.StackedInline):
     extra = 1
 
 
+class SkillInline(admin.StackedInline):
+    """Stacked skills details in user model.
+    """
+
+    model = Skill
+    extra = 1
+
+
 class UserAdmin(BaseUserAdmin):
     """User admin section with account details.
     """
 
-    inlines = (AccountInline, SocialInline, JobInline, EducationInline)
+    inlines = (AccountInline, SocialInline, JobInline, EducationInline, SkillInline)
 
 
 admin.site.unregister(User)

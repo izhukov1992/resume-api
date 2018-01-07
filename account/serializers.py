@@ -3,6 +3,7 @@ from rest_framework import serializers
 from socials.serializers import SocialsSerializer
 from jobs.serializers import JobsSerializer
 from educations.serializers import EducationsSerializer
+from skills.serializers import SkillsSerializer
 
 from .models import Account
 
@@ -17,6 +18,7 @@ class AccountSerializer(serializers.ModelSerializer):
     socials = SocialsSerializer(source='user.social_set', many=True)
     jobs = JobsSerializer(source='user.job_set', many=True)
     educations = EducationsSerializer(source='user.education_set', many=True)
+    skills = SkillsSerializer(source='user.skill_set', many=True)
 
     class Meta:
         model = Account
