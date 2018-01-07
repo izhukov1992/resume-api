@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Education(models.Model):
-    """Model of users' educations
+    """Model of users' educations.
     """
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)

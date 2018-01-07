@@ -5,7 +5,7 @@ from .constants import SOCIALS
 
 
 class Social(models.Model):
-    """Model of users' public resources
+    """Model of users' public resources.
     """
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)

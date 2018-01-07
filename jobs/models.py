@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Job(models.Model):
-    """Model of users' jobs
+    """Model of users' jobs.
     """
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)

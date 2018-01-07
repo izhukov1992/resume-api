@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from rest_framework import viewsets, permissions
 
-# Create your views here.
+from .models import Account
+from .serializers import AccountSerializer
+
+
+class AccountViewSet(viewsets.ReadOnlyModelViewSet):
+    """Views of Account model.
+    """
+
+    queryset = Account.objects.all()
+    serializer_class = AccountSerializer
+    permission_classes = [permissions.DjangoModelPermissions]

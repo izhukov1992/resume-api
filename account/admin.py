@@ -9,14 +9,14 @@ from educations.models import Education
 
 
 class AccountInline(admin.StackedInline):
-    """Stacked account details in user model
+    """Stacked account details in user model.
     """
 
     model = Account
 
 
 class SocialInline(admin.StackedInline):
-    """Stacked social resources details in user model
+    """Stacked social resources details in user model.
     """
 
     model = Social
@@ -24,7 +24,7 @@ class SocialInline(admin.StackedInline):
 
 
 class JobInline(admin.StackedInline):
-    """Stacked jobs details in user model
+    """Stacked jobs details in user model.
     """
 
     model = Job
@@ -32,7 +32,7 @@ class JobInline(admin.StackedInline):
 
 
 class EducationInline(admin.StackedInline):
-    """Stacked educations details in user model
+    """Stacked educations details in user model.
     """
 
     model = Education
@@ -40,7 +40,7 @@ class EducationInline(admin.StackedInline):
 
 
 class UserAdmin(BaseUserAdmin):
-    """User admin section with account details
+    """User admin section with account details.
     """
 
     inlines = (AccountInline, SocialInline, JobInline, EducationInline)
