@@ -18,6 +18,7 @@ from django.urls import path, include
 from rest_framework import routers
 
 from account.views import AccountViewSet
+from frontend.views import MainPageView
 
 
 api_v1_router = routers.DefaultRouter()
@@ -25,6 +26,7 @@ api_v1_router.register(r'account', AccountViewSet)
 
 
 urlpatterns = [
+    path('', MainPageView.as_view()),
     path('admin/', admin.site.urls),
     path('api/v1/', include(api_v1_router.urls)),
 ]
