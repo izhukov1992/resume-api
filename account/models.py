@@ -7,5 +7,6 @@ class Account(models.Model):
     """
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    userpic = models.ImageField()
     resume = models.TextField()
     interests = models.TextField()
