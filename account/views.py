@@ -10,4 +10,4 @@ class AccountViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
-    permission_classes = [permissions.DjangoModelPermissions]
+
