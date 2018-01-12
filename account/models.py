@@ -7,6 +7,6 @@ class Account(models.Model):
     """
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    userpic = models.ImageField()
+    userpic = models.ImageField(upload_to='resume')
     resume = models.TextField()
     interests = models.TextField()
